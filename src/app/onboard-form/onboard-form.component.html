@@ -1,0 +1,78 @@
+<div class="form" [formGroup]="onBoardForm" align="center">
+
+  <table class="main-table">
+    <tr>
+      <td class="label-name">Student Name</td>
+      <td><input style="margin-top: 10px" type="text" placeholder="Student Name" formControlName="name" /></td>
+    </tr>
+    <tr>
+      <td class="label-name">Category</td>
+      <td>
+        <select id="categoryDropDown" name="categoryDropDown" style="margin-top: 10px" formControlName="category">
+          <option value="" disabled selected hidden>Category</option>
+          <option *ngFor="let category of categories"
+                  [ngValue]="category.type">{{ category.type }}</option>
+        </select>
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td class="label-name">Documents</td>
+      <td>
+        <table>
+          <tr>
+            <td>Domicile *</td>
+            <td><input class="check-box" type="checkbox" placeholder="Domicile" required="true" formControlName="domicile"/></td>
+          </tr>
+          <tr>
+            <td>Birth Certificate *</td>
+            <td><input class="check-box" type="checkbox" placeholder="Domicile" required="true" formControlName="birthCertificate"/></td>
+          </tr>
+          <tr>
+            <td>Mark Sheets *</td>
+            <td><input class="check-box" type="checkbox" placeholder="Domicile" required="true" formControlName="markSheets"/></td>
+          </tr>
+          <tr>
+            <td>Police Clearance
+              <label *ngIf="onBoardForm.get('category').value == categories[1].type">*</label>
+            </td>
+            <td><input class="check-box" type="checkbox" placeholder="Domicile" required="{{ onBoardForm.get('category').value == categories[1].type}}" formControlName="policeClearance"/></td>
+          </tr>
+          <tr>
+            <td>Passport
+              <label *ngIf="onBoardForm.get('category').value == categories[1].type">*</label>
+            </td>
+            <td><input class="check-box" type="checkbox" placeholder="Domicile" required="{{ onBoardForm.get('category').value == categories[1].type}}" formControlName="passport"/></td>
+          </tr>
+          <tr>
+            <td>Declaration *</td>
+            <td><input class="check-box" type="checkbox" placeholder="Domicile" required="true" formControlName="declaration"/></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="label-name">DOB</td>
+      <td><input style="margin-top: 10px" type="date" placeholder="Date of Birth" formControlName="dob" /></td>
+    </tr>
+    <tr>
+      <td class="label-name">Father's Name</td>
+      <td><input style="margin-top: 10px" type="text" placeholder="Father Name" formControlName="fatherName" /></td>
+    </tr>
+    <tr>
+      <td class="label-name">Mother's Name</td>
+      <td><input style="margin-top: 10px" type="text" placeholder="Mother Name" formControlName="motherName" /></td>
+    </tr>
+    <tr>
+      <td class="label-name">Last Class Score</td>
+      <td><input style="margin-top: 10px" type="number" [min]="0" [max]="100" placeholder="Last Class Score" formControlName="lastClassScore" /></td>
+    </tr>
+  </table>
+
+  <input type="number" placeholder="Identifier" hidden="true" required="false" formControlName="identifier"/>
+
+
+
+  <button class="w3-btn w3-blue" type="submit" (click)="onBoard()" [disabled]="!onBoardForm.valid" >Onboard<i class="w3-medium fa fa-check"></i>
+  </button>
+</div>

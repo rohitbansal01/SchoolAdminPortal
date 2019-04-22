@@ -1,0 +1,30 @@
+[
+  {
+    "name": "name",
+    "category": "name",
+    "domicile": "name",
+    "birthCertificate": true,
+    "markSheets": true,
+    "policeClearance": true,
+    "passport": true,
+    "declaration": true,
+    "dob": "name",
+    "fatherName": "name",
+    "motherName": "name",
+    "lastClassScore": "name"
+  },
+  {
+    "name": "name",
+    "category": "name",
+    "domicile": "name",
+    "birthCertificate": true,
+    "markSheets": true,
+    "policeClearance": true,
+    "passport": true,
+    "declaration": true,
+    "dob": "name",
+    "fatherName": "name",
+    "motherName": "name",
+    "lastClassScore": "name"
+  }
+]

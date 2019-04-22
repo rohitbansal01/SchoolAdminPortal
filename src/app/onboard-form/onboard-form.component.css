@@ -1,0 +1,51 @@
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  margin: 8px 0 8px 2px;
+  display: inline-block;
+}
+
+.main-table {
+  height: 100%;
+}
+
+.label-name {
+  text-align: left;
+  font-size: larger;
+  width: 250px;
+}
+
+input {
+  height: 20px;
+  margin-top: 0px;
+  width: 100%;
+}
+
+select {
+  height: 26px;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.form {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+input[type="checkbox"]{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.form {
+  height: 100%;
+}

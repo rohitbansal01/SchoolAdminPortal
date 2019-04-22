@@ -1,0 +1,56 @@
+button {
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  margin: 8px 0 8px 2px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+input[type=text], input[type=password] {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+
+.outer-box {
+  width: 95vw;
+  height: 90vh;
+  border: 2px solid black;
+  /*padding: 50px;*/
+  /*padding-top: 50%;*/
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.login-page-heading {
+  text-align: center;
+  font-size: large;
+  color: blue;
+}
+
+.main-div {
+  margin-top: 12%;
+}
+
+.login-button {
+  background-color: #4CAF50;
+}
+
+.reset-button {
+  background-color: #A0A0A0;
+}
